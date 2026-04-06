@@ -1,0 +1,247 @@
+{
+  "clause_id": "9",
+  "clause_title": "Concept",
+  "sections": [
+    {
+      "section_id": "9.1",
+      "section_title": "General",
+      "content": [
+        "The concept phase involves consideration of vehicle-level functionality as implemented in items.",
+        "In this clause, the item and its operational environment are identified as an 'Item definition' (see 9.3), which forms the basis for subsequent activities.",
+        "This clause also specifies cybersecurity goals for the item (see 9.4), which are the highest-level requirements.",
+        "Cybersecurity risks are assessed using the methods of Clause 15, and cybersecurity claims are used to justify risk retention or sharing.",
+        "The cybersecurity concept (see 9.5) consists of cybersecurity requirements and requirements on the operational environment, both derived from the cybersecurity goals."
+      ]
+    },
+    {
+      "section_id": "9.2",
+      "section_title": "Objectives",
+      "content": [
+        "The objectives of this clause are to:",
+        "a) define the item, its operational environment, and their interactions in the context of cybersecurity;",
+        "b) specify cybersecurity goals and cybersecurity claims; and",
+        "c) specify the cybersecurity concept to achieve cybersecurity goals."
+      ]
+    },
+    {
+      "section_id": "9.3",
+      "section_title": "Item Definition",
+      "subsections": [
+        {
+          "subsection_id": "9.3.1",
+          "subsection_title": "Inputs",
+          "subsubsections": [
+            {
+              "subsubsection_id": "9.3.1.1",
+              "subsubsection_title": "Prerequisites",
+              "content": ["None."]
+            },
+            {
+              "subsubsection_id": "9.3.1.2",
+              "subsubsection_title": "Further Supporting Information",
+              "content": [
+                "Existing information regarding the item and its operational environment can be considered.",
+                "For example, in-vehicle E/E system architecture, internal and external networks, and documentation from earlier developments."
+              ]
+            }
+          ]
+        },
+        {
+          "subsection_id": "9.3.2",
+          "subsection_title": "Requirements and Recommendations",
+          "requirements": [
+            {
+              "id": "RQ-09-01",
+              "description": [
+                "The following information on the item shall be identified:",
+                "a) item boundary;",
+                "b) item functions; and",
+                "c) preliminary architecture."
+              ]
+            },
+            {
+              "id": "RQ-09-02",
+              "description": [
+                "Information about the operational environment of the item relevant to cybersecurity shall be described."
+              ]
+            }
+          ]
+        },
+        {
+          "subsection_id": "9.3.3",
+          "subsection_title": "Work Products",
+          "work_products": [
+            {
+              "id": "WP-09-01",
+              "description": "Item definition, resulting from the requirements of 9.3.2."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "9.4",
+      "section_title": "Cybersecurity Goals",
+      "subsections": [
+        {
+          "subsection_id": "9.4.1",
+          "subsection_title": "Inputs",
+          "subsubsections": [
+            {
+              "subsubsection_id": "9.4.1.1",
+              "subsubsection_title": "Prerequisites",
+              "content": ["Item definition [WP-09-01] shall be available."]
+            },
+            {
+              "subsubsection_id": "9.4.1.2",
+              "subsubsection_title": "Further Supporting Information",
+              "content": ["Cybersecurity events [WP-08-03] can be considered."]
+            }
+          ]
+        },
+        {
+          "subsection_id": "9.4.2",
+          "subsection_title": "Requirements and Recommendations",
+          "requirements": [
+            {
+              "id": "RQ-09-03",
+              "description": [
+                "An analysis based on the item definition shall be performed that involves:",
+                "a) asset identification in accordance with 15.3;",
+                "b) threat scenario identification in accordance with 15.4;",
+                "c) impact rating in accordance with 15.5;",
+                "d) attack path analysis in accordance with 15.6;",
+                "e) attack feasibility rating in accordance with 15.7; and",
+                "f) risk value determination in accordance with 15.8."
+              ]
+            },
+            {
+              "id": "RQ-09-04",
+              "description": [
+                "Based on the results of RQ-09-03, risk treatment options shall be determined for each threat scenario in accordance with 15.9."
+              ]
+            },
+            {
+              "id": "RQ-09-05",
+              "description": [
+                "If the risk treatment decision for a threat scenario includes reducing the risk, one or more corresponding cybersecurity goals shall be specified."
+              ]
+            },
+            {
+              "id": "RQ-09-06",
+              "description": [
+                "If the risk treatment decision for a threat scenario includes sharing the risk or retaining the risk due to analysis assumptions, one or more corresponding cybersecurity claims shall be specified."
+              ]
+            },
+            {
+              "id": "RQ-09-07",
+              "description": [
+                "A verification shall be performed to confirm:",
+                "a) correctness and completeness of the analysis results (RQ-09-03) with respect to the item definition;",
+                "b) completeness, correctness, and consistency of risk treatment decisions (RQ-09-04) with respect to analysis results;",
+                "c) completeness, correctness, and consistency of cybersecurity goals (RQ-09-05) and claims (RQ-09-06) with respect to treatment decisions;",
+                "d) consistency of all cybersecurity goals and claims for the item."
+              ]
+            }
+          ]
+        },
+        {
+          "subsection_id": "9.4.3",
+          "subsection_title": "Work Products",
+          "work_products": [
+            {
+              "id": "WP-09-02",
+              "description": "TARA, resulting from RQ-09-03 and RQ-09-04."
+            },
+            {
+              "id": "WP-09-03",
+              "description": "Cybersecurity goals, resulting from RQ-09-05."
+            },
+            {
+              "id": "WP-09-04",
+              "description": "Cybersecurity claims, resulting from RQ-09-06."
+            },
+            {
+              "id": "WP-09-05",
+              "description": "Verification report for cybersecurity goals, resulting from RQ-09-07."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "9.5",
+      "section_title": "Cybersecurity Concept",
+      "subsections": [
+        {
+          "subsection_id": "9.5.1",
+          "subsection_title": "Inputs",
+          "subsubsections": [
+            {
+              "subsubsection_id": "9.5.1.1",
+              "subsubsection_title": "Prerequisites",
+              "content": [
+                "Item definition [WP-09-01];",
+                "Cybersecurity goals [WP-09-03];",
+                "Cybersecurity claims [WP-09-04]."
+              ]
+            },
+            {
+              "subsubsection_id": "9.5.1.2",
+              "subsubsection_title": "Further Supporting Information",
+              "content": ["TARA [WP-09-02] can be considered."]
+            }
+          ]
+        },
+        {
+          "subsection_id": "9.5.2",
+          "subsection_title": "Requirements and Recommendations",
+          "requirements": [
+            {
+              "id": "RQ-09-08",
+              "description": [
+                "Technical and/or operational cybersecurity controls and their interactions to achieve the cybersecurity goals shall be described, taking into account:",
+                "a) dependencies between item functions; and/or",
+                "b) cybersecurity claims."
+              ]
+            },
+            {
+              "id": "RQ-09-09",
+              "description": [
+                "Cybersecurity requirements of the item and requirements on the operational environment shall be defined for the cybersecurity goals in accordance with RQ-09-08."
+              ]
+            },
+            {
+              "id": "RQ-09-10",
+              "description": [
+                "Cybersecurity requirements shall be allocated to the item and, if applicable, to one or more of its components."
+              ]
+            },
+            {
+              "id": "RQ-09-11",
+              "description": [
+                "The results of RQ-09-08, RQ-09-09, and RQ-09-10 shall be verified to confirm:",
+                "a) completeness, correctness, and consistency with cybersecurity goals; and",
+                "b) consistency with cybersecurity claims."
+              ]
+            }
+          ]
+        },
+        {
+          "subsection_id": "9.5.3",
+          "subsection_title": "Work Products",
+          "work_products": [
+            {
+              "id": "WP-09-06",
+              "description": "Cybersecurity concept, resulting from RQ-09-08, RQ-09-09, and RQ-09-10."
+            },
+            {
+              "id": "WP-09-07",
+              "description": "Verification report for the cybersecurity concept, resulting from RQ-09-11."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "abs": {
+    "name": "ABS (Anti-lock Braking System)",
+    "type": "ECU",
+    "hint": "Assets: ABS ECU Firmware, MCU, CAN bus messages, Diagnostic services (UDS), Diagnostic port (OBD-II) interface, Calibration data."
+  },
+  "bms": {
+    "name": "BMS (Battery Management System)",
+    "type": "ECU",
+    "hint": "Assets: BatteryPack (external, default), CellMonitoring (default), IO and Analog (default), Code Flash (default, inside MCU group), Data Flash (default, inside MCU group), Keys (default, inside MCU group), Certificates (default, inside MCU group), Debug Port (default, inside MCU group), CAN Transceiver (default), ICD Shunt CAN (default), SoC (data node), SoH (data node), Vehicle System (external, default), Cloud (external, default). The 'Battery Management System' is a group container; inside it is an unnamed MCU subgroup containing Code Flash, Data Flash, Keys, Certificates, and Debug Port. Edges: SPI (CellMonitoring↔BatteryPack), SPI_CellMonitor (MCU group↔CellMonitoring), IO (IO and Analog↔BatteryPack), IO_PINS (MCU group↔IO and Analog), CAN1 (MCU group↔ICD Shunt CAN), CAN2 (MCU group↔CAN Transceiver), ICD_Data (ICD Shunt CAN↔BatteryPack), Vehicle CAN (Vehicle System↔CAN Transceiver), Internet (Vehicle System↔Cloud)."
+  },
+  "tcu": {
+    "name": "TCU (Telematics Control Unit)",
+    "type": "ECU",
+    "hint": "Assets: Modem firmware, SIM/eSIM credentials, Wi-Fi/Bluetooth stacks, Telematics cloud APIs, OTA update client, Security tokens/credentials, CAN/Ethernet gateway routing, Telemetry logs."
+  },
+  "telematics": {
+    "name": "Telematics System",
+    "type": "System",
+    "hint": "Assets: Vehicle-cloud APIs, OTA servers, Security certificates, Authentication tokens, Telemetry storage, Data synchronization protocols."
+  },
+  "ecs": {
+    "name": "ECU - General (Electronic Control Unit)",
+    "type": "ECU",
+    "hint": "Assets: MCU/SoC, Firmware flash, RAM content, Bootloader, Secure boot keys, Debug ports (JTAG/UART), Network interfaces (CAN, Ethernet), Diagnostic interface."
+  },
+  "ecm": {
+    "name": "ECM / Powertrain (Engine Control Module)",
+    "type": "ECU",
+    "hint": "Assets: ECU MCU, CAN bus messages, OBD-II diagnostic services, Firmware, Calibration files (Engine maps), Variant coding."
+  },
+  "adas": {
+    "name": "ADAS ECU",
+    "type": "ECU",
+    "hint": "Assets: Perception software, ADAS ECU MCU, CAN/Ethernet messages, Neural network model weights, Calibration data, OTA client, V2X interface."
+  },
+  "infotainment": {
+    "name": "Infotainment Head Unit",
+    "type": "ECU",
+    "hint": "Assets: Head unit OS (Linux/Android/QNX), Bluetooth/Wi-Fi stacks, USB driver stack, Telephony stacks, Application layer code, Navigation data, PII (User profiles), CAN gateway."
+  },
+  "gateway": {
+    "name": "Gateway / Domain Controller",
+    "type": "ECU",
+    "hint": "Assets: Inter-bus routing tables, Firewall/filtering rules, Message broker service, OTA gateway, Secure gateway credentials, Firmware."
+  },
+  "eps": {
+    "name": "EPS (Electric Power Steering)",
+    "type": "ECU",
+    "hint": "Assets: EPS MCU, CAN bus messages, Safety watchdog logic, Firmware, Calibration parameters."
+  },
+  "airbag": {
+    "name": "Airbag / SRS ECU",
+    "type": "ECU",
+    "hint": "Assets: Airbag control MCU, Diagnostic services, Firmware, Safety watchdog code, Event logs (Crash data)."
+  },
+  "bcm": {
+    "name": "BCM (Body Control Module)",
+    "type": "ECU",
+    "hint": "Assets: BCM firmware, CAN/LIN messages, Remote keyless entry (RKE) logic, Immobilizer authentication keys, Configuration parameters."
+  },
+  "charger": {
+    "name": "EV Charger Interface / Onboard Charger",
+    "type": "Interface",
+    "hint": "Assets: Charger control MCU, Charging protocols (OCPP, ISO 15118), Digital certificates (Plug & Charge), CAN comms, OTA client."
+  },
+  "motor_controller": {
+    "name": "Motor Controller / Inverter",
+    "type": "ECU",
+    "hint": "Assets: Inverter control MCU, CAN/Ethernet messages, Firmware, Control algorithms, Calibration data."
+  },
+  "cluster": {
+    "name": "Instrument Cluster",
+    "type": "ECU",
+    "hint": "Assets: Cluster MCU, CAN interface messages, UI Application software, Firmware, Diagnostic services."
+  },
+  "door_control": {
+    "name": "Door Control Module",
+    "type": "ECU",
+    "hint": "Assets: Keyless entry interface logic, CAN/LIN bus messages, Remote fob credentials, Diagnostic interface."
+  },
+  "keyless_entry": {
+    "name": "Keyless Entry / Smart Key System",
+    "type": "Interface",
+    "hint": "Assets: RF/BLE/NFC protocol stacks, Immobilizer cryptographic keys, Rolling code algorithms, Backend authentication tokens."
+  },
+  "hvac": {
+    "name": "HVAC Controller",
+    "type": "ECU",
+    "hint": "Assets: HVAC control MCU, CAN/LIN messages, Firmware, Configuration flags."
+  },
+  "ota_server": {
+    "name": "OTA Server / Update System",
+    "type": "System",
+    "hint": "Assets: Update package repository, Signing keys (Private), Distribution endpoints, Authentication tokens, CI/CD pipeline, Update logs."
+  },
+  "diagnostic": {
+    "name": "Diagnostic Interface (OBD-II / JTAG / UART)",
+    "type": "Interface",
+    "hint": "Assets: Diagnostic services (UDS), Debug interfaces (JTAG/SWD), Bootloader unlock tokens, Authorized debug credentials, Diagnostic tool APIs."
+  },
+  "v2x": {
+    "name": "V2X Communication Module",
+    "type": "Interface",
+    "hint": "Assets: V2X protocol stacks, Digital certificates (PKI), Enrollment credentials, Message broker, OTA client for stack updates."
+  },
+  "gps": {
+    "name": "GNSS / GPS Receiver",
+    "type": "Interface",
+    "hint": "Assets: GNSS receiver firmware, Location data logs, Time synchronization data, Anti-spoofing logic/software."
+  },
+  "lidar": {
+    "name": "Lidar Sensor System",
+    "type": "System",
+    "hint": "Assets: Signal processing software, CAN/Ethernet messages, Firmware, Calibration data."
+  },
+  "radar": {
+    "name": "Radar Sensor System",
+    "type": "System",
+    "hint": "Assets: DSP firmware, CAN/Ethernet messages, Perception algorithms, Calibration data."
+  },
+  "camera": {
+    "name": "Camera Sensor System",
+    "type": "System",
+    "hint": "Assets: Image processing firmware (ISP), CAN/Ethernet interface, Neural network models, Calibration parameters."
+  },
+  "tpms": {
+    "name": "TPMS (Tire Pressure Monitoring System)",
+    "type": "System",
+    "hint": "Assets: RF communication protocol, Sensor IDs, CAN/LIN messages, Firmware logic."
+  },
+  "obd": {
+    "name": "OBD-II Diagnostic Port",
+    "type": "Interface",
+    "hint": "Assets: Diagnostic message routing, Access control (Seed-Key), UDS services, Tool authentication."
+  },
+  "bluetooth": {
+    "name": "Bluetooth Interface",
+    "type": "Interface",
+    "hint": "Assets: Bluetooth stack, Pairing credentials/keys, MAC addresses, Firmware, Vehicle access layer APIs."
+  },
+  "wifi": {
+    "name": "Automotive Wi-Fi Module",
+    "type": "Interface",
+    "hint": "Assets: Wi-Fi stack firmware, SSID/Passkey storage, Telematics bridge logic, OTA link."
+  },
+  "can_bus": {
+    "name": "CAN Bus Network",
+    "type": "Interface",
+    "hint": "Assets: Message frames, Arbitration IDs, Database (DBC) files, Message filters, Gateway routing rules."
+  },
+  "lin_bus": {
+    "name": "LIN Bus Network",
+    "type": "Interface",
+    "hint": "Assets: Master/Slave schedule tables, Message IDs, Firmware interfaces."
+  },
+  "flexray": {
+    "name": "FlexRay Network",
+    "type": "Interface",
+    "hint": "Assets: Timing schedule tables, Protocol stack, Network management parameters."
+  },
+  "zonal": {
+    "name": "Zonal ECU",
+    "type": "ECU",
+    "hint": "Assets: Ethernet backbone routing, CAN/LIN bridging logic, Centralized firmware partitions, Security policies."
+  },
+  "sensor_fusion": {
+    "name": "Sensor Fusion Module",
+    "type": "ECU",
+    "hint": "Assets: Fusion algorithms, AI/ML models, Object data streams, MCU/SoC, CAN/Ethernet messages."
+  },
+  "brake_control": {
+    "name": "Brake Control System",
+    "type": "System",
+    "hint": "Assets: Safety controller firmware, CAN communication messages, Calibration data."
+  },
+  "throttle": {
+    "name": "Throttle Control System",
+    "type": "System",
+    "hint": "Assets: ECU driver software, CAN bus messages, Calibration data, Firmware."
+  },
+  "steering": {
+    "name": "Steering ECU",
+    "type": "ECU",
+    "hint": "Assets: Steering control firmware, CAN bus messages, Safety watchdogs, Calibration parameters."
+  },
+  "charging_port": {
+    "name": "Automotive Charging Port",
+    "type": "Interface",
+    "hint": "Assets: Pilot signal logic, Charge controller firmware, Communication module (ISO 15118)."
+  },
+  "mobile_app": {
+    "name": "Vehicle Mobile App",
+    "type": "System",
+    "hint": "Assets: App credentials, API tokens, Command/Control messages, Authentication protocols, PII."
+  },
+  "voice_assistant": {
+    "name": "Automotive Voice Assistant Integration",
+    "type": "System",
+    "hint": "Assets: Voice AI models, Cloud API keys, Telematics bridge, CAN command interface."
+  },
+  "rfid_entry": {
+    "name": "RFID Entry System",
+    "type": "Interface",
+    "hint": "Assets: Tag authentication keys, Firmware logic, ECU link messages."
+  },
+  "immobilizer": {
+    "name": "Immobilizer System",
+    "type": "Interface",
+    "hint": "Assets: Cryptographic keys, Challenge-response logic, Immobilizer ECU firmware, CAN bus link."
+  },
+  "ivi": {
+    "name": "IVI (In-Vehicle Infotainment) System",
+    "type": "System",
+    "hint": "Assets: OS, Applications, User accounts, Media protocol stacks, Bluetooth/Wi-Fi credentials, CAN/Ethernet bridge."
+  },
+  "digital_cockpit": {
+    "name": "Digital Cockpit",
+    "type": "System",
+    "hint": "Assets: HMI software layers, Graphics controller firmware, User data, Instrument cluster link messages."
+  },
+  "usb": {
+    "name": "USB Interface",
+    "type": "Interface",
+    "hint": "Assets: USB driver stack, Firmware update mechanism, OS interface, Media playback software."
+  },
+  "hdmi": {
+    "name": "HDMI Port (Automotive IVI)",
+    "type": "Interface",
+    "hint": "Assets: Display controller firmware, Infotainment MCU interface, Video routing logic."
+  },
+  "media_interface": {
+    "name": "Media Player Interface",
+    "type": "System",
+    "hint": "Assets: Multimedia codecs, Streaming app credentials, Audio processor firmware, User metadata storage."
+  },
+  "e_call": {
+    "name": "E-call System",
+    "type": "System",
+    "hint": "Assets: eSIM credentials, Modem firmware, Crash detection logic, Emergency API tokens."
+  },
+  "telematics_cloud": {
+    "name": "Telematics Cloud API",
+    "type": "System",
+    "hint": "Assets: Cloud endpoints, Authentication keys, Vehicle tokens, OTA interface, Telemetry database."
+  },
+  "vehicle_config": {
+    "name": "Vehicle Configuration API",
+    "type": "System",
+    "hint": "Assets: Configuration database, Variant coding, Authentication layer, CAN signal mapping."
+  }
+}

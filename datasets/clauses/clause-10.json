@@ -1,0 +1,202 @@
+{
+  "clause_id": "10",
+  "clause_title": "Product Development",
+  "sections": [
+    {
+      "section_id": "10.1",
+      "section_title": "General",
+      "content": [
+        "This clause describes the specification of cybersecurity requirements and the architectural design (see 10.4.1).",
+        "It also describes integration and verification activities (see 10.4.2).",
+        "Cybersecurity activities are performed iteratively until no further refinements of cybersecurity controls are needed.",
+        "Cybersecurity specifications are defined and verified to confirm fulfilment of the cybersecurity concept.",
+        "Product development activities may follow a V-model-based workflow where design corresponds to the left side and verification to the right side, applicable to multiple abstraction levels such as item, component, and sub-component."
+      ]
+    },
+    {
+      "section_id": "10.2",
+      "section_title": "Objectives",
+      "content": [
+        "The objectives of this clause are to:",
+        "a) define cybersecurity specifications;",
+        "b) verify that the defined cybersecurity specifications conform to higher-level specifications;",
+        "c) identify weaknesses in the component; and",
+        "d) provide evidence that implementation and integration of components conform to the cybersecurity specifications."
+      ]
+    },
+    {
+      "section_id": "10.3",
+      "section_title": "Inputs",
+      "subsections": [
+        {
+          "subsection_id": "10.3.1",
+          "subsection_title": "Prerequisites",
+          "content": [
+            "Cybersecurity specifications from higher levels of abstraction [WP-10-01] shall be available, limited to information relevant for the component under development.",
+            "Information assumed on the operational environment of the component under development shall be available.",
+            "For development at the highest level, the cybersecurity concept [WP-09-06] and item definition [WP-09-01] are used instead of higher-level cybersecurity specifications."
+          ]
+        },
+        {
+          "subsection_id": "10.3.2",
+          "subsection_title": "Further Supporting Information",
+          "content": [
+            "Item definition [WP-09-01];",
+            "Cybersecurity concept [WP-09-06];",
+            "Existing architectural design;",
+            "Established cybersecurity controls;",
+            "Known weaknesses or vulnerabilities from reused components."
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "10.4",
+      "section_title": "Requirements and Recommendations",
+      "subsections": [
+        {
+          "subsection_id": "10.4.1",
+          "subsection_title": "Design",
+          "requirements": [
+            {
+              "id": "RQ-10-01",
+              "description": [
+                "Cybersecurity specifications shall be defined based on:",
+                "a) cybersecurity specifications from higher levels of abstraction;",
+                "b) cybersecurity controls selected for implementation, if applicable; and",
+                "c) existing architectural design, if applicable."
+              ]
+            },
+            {
+              "id": "RQ-10-02",
+              "description": [
+                "The defined cybersecurity requirements shall be allocated to components of the architectural design."
+              ]
+            },
+            {
+              "id": "RQ-10-03",
+              "description": [
+                "Procedures to ensure cybersecurity after component development shall be specified, if applicable."
+              ]
+            },
+            {
+              "id": "RQ-10-04",
+              "description": [
+                "When selecting design, modelling, or programming notations or languages for cybersecurity specifications or implementation, the following shall be considered:",
+                "a) unambiguous and comprehensible syntax and semantics;",
+                "b) support for modularity, abstraction, and encapsulation;",
+                "c) use of structured constructs;",
+                "d) support for secure design and implementation techniques;",
+                "e) integration capability with existing components; and",
+                "f) resilience of the language against vulnerabilities due to improper use."
+              ]
+            },
+            {
+              "id": "RQ-10-05",
+              "description": [
+                "Criteria for suitable design, modelling, or programming languages not addressed by the language itself shall be covered by guidelines or the development environment."
+              ]
+            },
+            {
+              "id": "RQ-10-07",
+              "description": [
+                "The architectural design defined in RQ-10-01 shall be analyzed to identify weaknesses."
+              ]
+            },
+            {
+              "id": "RQ-10-08",
+              "description": [
+                "Defined cybersecurity specifications shall be verified for completeness, correctness, and consistency with cybersecurity specifications from higher levels of abstraction."
+              ]
+            }
+          ],
+          "recommendations": [
+            {
+              "id": "RC-10-06",
+              "description": [
+                "Established and trusted design and implementation principles should be applied to avoid or minimize introduction of weaknesses."
+              ]
+            }
+          ]
+        },
+        {
+          "subsection_id": "10.4.2",
+          "subsection_title": "Integration and Verification",
+          "requirements": [
+            {
+              "id": "RQ-10-09",
+              "description": [
+                "Integration and verification activities shall confirm that the implementation and integration of components fulfil the defined cybersecurity specifications."
+              ]
+            },
+            {
+              "id": "RQ-10-10",
+              "description": [
+                "Integration and verification activities shall be specified considering:",
+                "a) the defined cybersecurity specifications;",
+                "b) configurations intended for series production;",
+                "c) capability to support functionality defined in the cybersecurity specifications; and",
+                "d) conformity with modelling, design, and coding guidelines defined in RQ-10-05."
+              ]
+            },
+            {
+              "id": "RQ-10-11",
+              "description": [
+                "If verification by testing is adopted, test coverage shall be evaluated using defined coverage metrics to determine sufficiency of test activities."
+              ]
+            },
+            {
+              "id": "RQ-10-13",
+              "description": [
+                "If testing as described in RC-10-12 is not performed, a rationale shall be provided explaining why testing is not required or feasible."
+              ]
+            }
+          ],
+          "recommendations": [
+            {
+              "id": "RC-10-12",
+              "description": [
+                "Testing should be performed to confirm that unidentified weaknesses and vulnerabilities remaining in the component are minimized.",
+                "Testing methods may include functional testing, vulnerability scanning, fuzz testing, and penetration testing."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "10.5",
+      "section_title": "Work Products",
+      "work_products": [
+        {
+          "id": "WP-10-01",
+          "description": "Cybersecurity specifications, resulting from RQ-10-01 and RQ-10-02."
+        },
+        {
+          "id": "WP-10-02",
+          "description": "Cybersecurity requirements for post-development, resulting from RQ-10-03."
+        },
+        {
+          "id": "WP-10-03",
+          "description": "Documentation of design, modelling, or programming languages and coding guidelines, resulting from RQ-10-04 and RQ-10-05."
+        },
+        {
+          "id": "WP-10-04",
+          "description": "Verification report for cybersecurity specifications, resulting from RQ-10-08."
+        },
+        {
+          "id": "WP-10-05",
+          "description": "Weaknesses found during product development, resulting from RQ-10-07 and RC-10-12, if applicable."
+        },
+        {
+          "id": "WP-10-06",
+          "description": "Integration and verification specification, resulting from RQ-10-10."
+        },
+        {
+          "id": "WP-10-07",
+          "description": "Integration and verification report, resulting from RQ-10-09, RQ-10-11, and RC-10-12."
+        }
+      ]
+    }
+  ]
+}

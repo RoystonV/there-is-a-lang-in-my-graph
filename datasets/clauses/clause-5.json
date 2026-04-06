@@ -1,0 +1,258 @@
+{
+  "clause_id": "5",
+  "clause_title": "Organizational Cybersecurity Management",
+  "sections": [
+    {
+      "section_id": "5.1",
+      "section_title": "General",
+      "content": [
+        "To enable cybersecurity engineering, the organization shall institute and maintain cybersecurity governance and a cybersecurity culture.",
+        "This includes cybersecurity awareness management, competence management, and continuous improvement.",
+        "The organization shall specify organizational rules and processes that are independently audited against the objectives of this document.",
+        "To support cybersecurity engineering, the organization shall implement management systems for cybersecurity, including managing tools and applying a quality management system."
+      ]
+    },
+    {
+      "section_id": "5.2",
+      "section_title": "Objectives",
+      "content": [
+        "The objectives of this clause are to:",
+        "a) define a cybersecurity policy and the organizational rules and processes for cybersecurity;",
+        "b) assign the responsibilities and corresponding authorities required to perform cybersecurity activities;",
+        "c) support the implementation of cybersecurity, including the provision of resources and the management of the interactions between cybersecurity processes and related processes;",
+        "d) manage the cybersecurity risk;",
+        "e) institute and maintain a cybersecurity culture, including competence management, awareness management, and continuous improvement;",
+        "f) support and manage the sharing of cybersecurity information;",
+        "g) institute and maintain management systems that support the maintenance of cybersecurity;",
+        "h) provide evidence that the use of tools does not adversely affect cybersecurity; and",
+        "i) perform an organizational cybersecurity audit."
+      ]
+    },
+    {
+      "section_id": "5.3",
+      "section_title": "Inputs",
+      "subsections": [
+        {
+          "subsection_id": "5.3.1",
+          "subsection_title": "Prerequisites",
+          "content": ["None."]
+        },
+        {
+          "subsection_id": "5.3.2",
+          "subsection_title": "Further Supporting Information",
+          "content": [
+            "Existing evidence of conformity with standards that support quality management can be considered.",
+            "These may include IATF 16949, ISO 9001, ISO 10007, Automotive SPICE®, ISO/IEC 330xx family, ISO/IEC/IEEE 15288, and ISO/IEC/IEEE 12207."
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "5.4",
+      "section_title": "Requirements and Recommendations",
+      "subsections": [
+        {
+          "subsection_id": "5.4.1",
+          "subsection_title": "Cybersecurity Governance",
+          "requirements": [
+            {
+              "id": "RQ-05-01",
+              "description": [
+                "The organization shall define a cybersecurity policy that includes:",
+                "a) acknowledgment of road vehicle cybersecurity risks; and",
+                "b) the executive management’s commitment to manage the corresponding cybersecurity risks."
+              ]
+            },
+            {
+              "id": "RQ-05-02",
+              "description": [
+                "The organization shall establish and maintain rules and processes to:",
+                "a) enable the implementation of the requirements of this document; and",
+                "b) support the execution of the corresponding activities."
+              ]
+            },
+            {
+              "id": "RQ-05-03",
+              "description": [
+                "The organization shall assign and communicate the responsibilities and corresponding organizational authority to achieve and maintain cybersecurity."
+              ]
+            },
+            {
+              "id": "RQ-05-04",
+              "description": [
+                "The organization shall provide the resources to address cybersecurity, including personnel responsible for risk management, development, and incident management."
+              ]
+            },
+            {
+              "id": "RQ-05-05",
+              "description": [
+                "The organization shall identify disciplines related to or interacting with cybersecurity and establish and maintain communication channels between those disciplines in order to:",
+                "a) determine if and how cybersecurity will be integrated into existing processes; and",
+                "b) coordinate the exchange of relevant information.",
+                "Disciplines include information technology security, functional safety, and privacy."
+              ]
+            }
+          ]
+        },
+        {
+          "subsection_id": "5.4.2",
+          "subsection_title": "Cybersecurity Culture",
+          "requirements": [
+            {
+              "id": "RQ-05-06",
+              "description": [
+                "The organization shall foster and maintain a strong cybersecurity culture."
+              ]
+            },
+            {
+              "id": "RQ-05-07",
+              "description": [
+                "The organization shall ensure that persons to which cybersecurity roles and responsibilities are assigned have the competences and awareness to fulfil these.",
+                "Competence, awareness, and training programs should include:",
+                "- organizational rules and processes regarding cybersecurity, including risk management;",
+                "- organizational rules and processes regarding related disciplines such as functional safety and privacy;",
+                "- domain knowledge;",
+                "- systems engineering;",
+                "- cybersecurity-related methods, tools, and guidelines; and",
+                "- known attack methods and cybersecurity controls."
+              ]
+            },
+            {
+              "id": "RQ-05-08",
+              "description": [
+                "The organization shall institute and maintain a continuous improvement process.",
+                "This process shall include learning from previous experiences, cybersecurity monitoring, information gathered from internal and external sources, and products of similar application in the field.",
+                "It shall derive and apply improvements to subsequent cybersecurity activities, communicate lessons learned, and verify adequacy of organizational rules and processes in accordance with RQ-05-02."
+              ]
+            }
+          ]
+        },
+        {
+          "subsection_id": "5.4.3",
+          "subsection_title": "Information Sharing",
+          "requirements": [
+            {
+              "id": "RQ-05-09",
+              "description": [
+                "The organization shall define the circumstances under which information sharing related to cybersecurity is required, permitted, or prohibited, both internal and external to the organization.",
+                "These circumstances may depend on information type, approval processes, redaction requirements, source attribution, communication rules, vulnerability disclosure procedures, and handling requirements for highly sensitive data."
+              ]
+            }
+          ],
+          "recommendations": [
+            {
+              "id": "RC-05-10",
+              "description": [
+                "The organization should align its information security management of shared data with other parties in accordance with RQ-05-09."
+              ]
+            }
+          ]
+        },
+        {
+          "subsection_id": "5.4.4",
+          "subsection_title": "Management Systems",
+          "requirements": [
+            {
+              "id": "RQ-05-11",
+              "description": [
+                "The organization shall institute and maintain a quality management system in accordance with International Standards, or equivalent, to support cybersecurity engineering.",
+                "The system shall address:",
+                "a) change management;",
+                "b) documentation management;",
+                "c) configuration management; and",
+                "d) requirements management."
+              ]
+            },
+            {
+              "id": "RQ-05-12",
+              "description": [
+                "The configuration information required for maintaining cybersecurity of a product in the field shall remain available until the end of cybersecurity support for the product, to enable remedial actions."
+              ]
+            }
+          ],
+          "recommendations": [
+            {
+              "id": "RC-05-13",
+              "description": [
+                "A cybersecurity management system for the production processes should be established to support the activities of Clause 12."
+              ]
+            }
+          ]
+        },
+        {
+          "subsection_id": "5.4.5",
+          "subsection_title": "Tool Management",
+          "requirements": [
+            {
+              "id": "RQ-05-14",
+              "description": [
+                "Tools that can influence the cybersecurity of an item or component shall be managed.",
+                "These include tools used during concept or product development, production, and maintenance.",
+                "Tool management should ensure proper usage, access control, and authentication of tool users."
+              ]
+            }
+          ],
+          "recommendations": [
+            {
+              "id": "RC-05-15",
+              "description": [
+                "An appropriate environment to support remedial actions for cybersecurity incidents should be reproducible until the end of cybersecurity support for the product."
+              ]
+            }
+          ]
+        },
+        {
+          "subsection_id": "5.4.6",
+          "subsection_title": "Information Security Management",
+          "recommendations": [
+            {
+              "id": "RC-05-16",
+              "description": [
+                "Work products should be managed in accordance with an information security management system."
+              ]
+            }
+          ]
+        },
+        {
+          "subsection_id": "5.4.7",
+          "subsection_title": "Organizational Cybersecurity Audit",
+          "requirements": [
+            {
+              "id": "RQ-05-17",
+              "description": [
+                "A cybersecurity audit shall be performed independently to judge whether the organizational processes achieve the objectives of this document.",
+                "Such an audit can be included in, or combined with, a quality management system audit and should be performed periodically to ensure ongoing process adequacy."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "5.5",
+      "section_title": "Work Products",
+      "work_products": [
+        {
+          "id": "WP-05-01",
+          "description": "Cybersecurity policy, rules, and processes resulting from the requirements of 5.4.1 to 5.4.3."
+        },
+        {
+          "id": "WP-05-02",
+          "description": "Evidence of competence management, awareness management, and continuous improvement resulting from 5.4.2."
+        },
+        {
+          "id": "WP-05-03",
+          "description": "Evidence of the organization's management systems resulting from 5.4.4 and 5.4.6."
+        },
+        {
+          "id": "WP-05-04",
+          "description": "Evidence of tool management resulting from 5.4.5."
+        },
+        {
+          "id": "WP-05-05",
+          "description": "Organizational cybersecurity audit report resulting from 5.4.7."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,375 @@
+{
+  "clause_id": "6",
+  "clause_title": "Project Dependent Cybersecurity Management",
+  "sections": [
+    {
+      "section_id": "6.1",
+      "section_title": "General",
+      "content": [
+        "This clause describes the requirements regarding the management of cybersecurity development activities for a specific project.",
+        "Project dependent cybersecurity management includes allocation of responsibilities and planning of cybersecurity activities.",
+        "The document defines requirements generically so that they apply to a variety of items and components. Tailoring may be applied based on a defined rationale in the cybersecurity plan.",
+        "Tailoring may occur for reuse, component out-of-context, use of an off-the-shelf component, or update.",
+        "Reuse of items and components can be a valid development strategy, but modifications or environmental changes can introduce new vulnerabilities.",
+        "Changes in known attacks, vulnerabilities, or asset definitions since original development must be considered.",
+        "If an original item or component was developed per this document, reuse shall rely on existing work products; otherwise, reuse shall rely on available documentation with justification.",
+        "A component may be developed out-of-context based on assumed context and intended use. The supplier defines assumptions and derives cybersecurity requirements accordingly.",
+        "An off-the-shelf component is one not developed for a specific customer and used without design or implementation modification.",
+        "Such components may still be integrated into an item or component developed per this document, applying reuse analysis and change management as needed.",
+        "The cybersecurity case provides the argument supporting cybersecurity assurance and serves as input to cybersecurity assessment and release for post-development.",
+        "The cybersecurity assessment independently judges cybersecurity adequacy and supports the release decision for post-development."
+      ]
+    },
+    {
+      "section_id": "6.2",
+      "section_title": "Objectives",
+      "content": [
+        "The objectives of this clause are to:",
+        "a) assign responsibilities regarding the project’s cybersecurity activities;",
+        "b) plan cybersecurity activities, including tailored activities;",
+        "c) create a cybersecurity case;",
+        "d) perform a cybersecurity assessment, if applicable; and",
+        "e) decide whether the item or component can be released for post-development from a cybersecurity perspective."
+      ]
+    },
+    {
+      "section_id": "6.3",
+      "section_title": "Inputs",
+      "subsections": [
+        {
+          "subsection_id": "6.3.1",
+          "subsection_title": "Prerequisites",
+          "content": ["None."]
+        },
+        {
+          "subsection_id": "6.3.2",
+          "subsection_title": "Further Supporting Information",
+          "content": [
+            "The following information can be considered:",
+            "— organizational cybersecurity audit report [WP-05-03];",
+            "— project plan."
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "6.4",
+      "section_title": "Requirements and Recommendations",
+      "subsections": [
+        {
+          "subsection_id": "6.4.1",
+          "subsection_title": "Cybersecurity Responsibilities",
+          "requirements": [
+            {
+              "id": "RQ-06-01",
+              "description": [
+                "Responsibilities regarding the project’s cybersecurity activities shall be assigned and communicated in accordance with RQ-05-03."
+              ]
+            }
+          ]
+        },
+        {
+          "subsection_id": "6.4.2",
+          "subsection_title": "Cybersecurity Planning",
+          "requirements": [
+            {
+              "id": "RQ-06-02",
+              "description": [
+                "To decide cybersecurity activities needed for an item or component, analyze whether:",
+                "a) the item or component is cybersecurity relevant;",
+                "b) if cybersecurity relevant, it is a new development or a reuse; and",
+                "c) tailoring in accordance with 6.4.3 is applied."
+              ]
+            },
+            {
+              "id": "RQ-06-03",
+              "description": [
+                "The cybersecurity plan shall include:",
+                "a) objective of each activity;",
+                "b) dependencies on other activities or information;",
+                "c) responsible personnel;",
+                "d) required resources;",
+                "e) start and end points, and expected duration; and",
+                "f) identification of work products to be produced."
+              ]
+            },
+            {
+              "id": "RQ-06-04",
+              "description": [
+                "Responsibilities for developing, maintaining, and tracking progress of the cybersecurity plan shall be assigned per RQ-05-03 and RQ-05-04."
+              ]
+            },
+            {
+              "id": "RQ-06-05",
+              "description": [
+                "The cybersecurity plan shall be:",
+                "a) referenced in the project plan; or",
+                "b) included in the project plan such that cybersecurity activities are clearly distinguishable."
+              ]
+            },
+            {
+              "id": "RQ-06-06",
+              "description": [
+                "The cybersecurity plan shall specify required cybersecurity activities during concept and product development phases in accordance with Clauses 9, 10, 11, and 15."
+              ]
+            },
+            {
+              "id": "RQ-06-07",
+              "description": [
+                "The cybersecurity plan shall be updated whenever changes or refinements of activities are identified."
+              ]
+            },
+            {
+              "id": "PM-06-08",
+              "description": [
+                "For threat scenarios of risk value 1 determined per 15.8, conformity with 9.5, Clause 10, and Clause 11 may be omitted."
+              ]
+            },
+            {
+              "id": "RQ-06-09",
+              "description": [
+                "Work products identified in the cybersecurity plan shall be updated and maintained for accuracy until release for post-development."
+              ]
+            },
+            {
+              "id": "RQ-06-10",
+              "description": [
+                "If cybersecurity activities are distributed, customer and supplier shall each define a cybersecurity plan for their respective activities and interfaces per Clause 7."
+              ]
+            },
+            {
+              "id": "RQ-06-11",
+              "description": [
+                "The cybersecurity plan shall be under configuration and documentation management per 5.4.4."
+              ]
+            },
+            {
+              "id": "RQ-06-12",
+              "description": [
+                "Work products identified in the cybersecurity plan shall be subject to configuration, change, requirements, and documentation management per 5.4.4."
+              ]
+            }
+          ]
+        },
+        {
+          "subsection_id": "6.4.3",
+          "subsection_title": "Tailoring",
+          "policies": [
+            {
+              "id": "PM-06-13",
+              "description": ["A cybersecurity activity may be tailored."]
+            }
+          ],
+          "requirements": [
+            {
+              "id": "RQ-06-14",
+              "description": [
+                "If a cybersecurity activity is tailored, a rationale explaining adequacy and sufficiency to achieve the relevant objectives shall be provided and reviewed."
+              ]
+            }
+          ]
+        },
+        {
+          "subsection_id": "6.4.4",
+          "subsection_title": "Reuse",
+          "requirements": [
+            {
+              "id": "RQ-06-15",
+              "description": [
+                "A reuse analysis shall be carried out if an item or component:",
+                "a) has planned modifications;",
+                "b) is planned to be reused in another operational environment; or",
+                "c) is reused without modification but relevant information has changed."
+              ]
+            },
+            {
+              "id": "RQ-06-16",
+              "description": [
+                "A reuse analysis shall:",
+                "a) identify modifications to the item, component, and operational environment;",
+                "b) analyze cybersecurity implications of the modifications including validity of claims and assumptions;",
+                "c) identify affected or missing work products; and",
+                "d) specify cybersecurity activities required for conformity in the cybersecurity plan."
+              ]
+            },
+            {
+              "id": "RQ-06-17",
+              "description": [
+                "A reuse analysis of a component shall evaluate whether:",
+                "a) the component fulfils allocated cybersecurity requirements in its integration context; and",
+                "b) existing documentation sufficiently supports its integration."
+              ]
+            }
+          ]
+        },
+        {
+          "subsection_id": "6.4.5",
+          "subsection_title": "Component Out-of-Context",
+          "requirements": [
+            {
+              "id": "RQ-06-18",
+              "description": [
+                "Assumptions on intended use and context, including external interfaces, for a component developed out-of-context shall be documented in corresponding work products."
+              ]
+            },
+            {
+              "id": "RQ-06-19",
+              "description": [
+                "Cybersecurity requirements for out-of-context development shall be based on the assumptions documented in RQ-06-18."
+              ]
+            },
+            {
+              "id": "RQ-06-20",
+              "description": [
+                "For integration of an out-of-context component, cybersecurity claims and assumptions from RQ-06-18 shall be validated."
+              ]
+            }
+          ]
+        },
+        {
+          "subsection_id": "6.4.6",
+          "subsection_title": "Off-the-Shelf Component",
+          "requirements": [
+            {
+              "id": "RQ-06-21",
+              "description": [
+                "When integrating an off-the-shelf component, cybersecurity-relevant documentation shall be gathered and analyzed to determine whether:",
+                "a) allocated cybersecurity requirements can be fulfilled;",
+                "b) the component suits the intended application context; and",
+                "c) existing documentation supports cybersecurity activities."
+              ]
+            },
+            {
+              "id": "RQ-06-22",
+              "description": [
+                "If existing documentation is insufficient to support integration, cybersecurity activities required to conform with this document shall be identified and performed."
+              ]
+            }
+          ]
+        },
+        {
+          "subsection_id": "6.4.7",
+          "subsection_title": "Cybersecurity Case",
+          "requirements": [
+            {
+              "id": "RQ-06-23",
+              "description": [
+                "A cybersecurity case shall be created to provide the argument for the cybersecurity of the item or component, supported by work products."
+              ]
+            }
+          ]
+        },
+        {
+          "subsection_id": "6.4.8",
+          "subsection_title": "Cybersecurity Assessment",
+          "requirements": [
+            {
+              "id": "RQ-06-24",
+              "description": [
+                "A decision whether to perform a cybersecurity assessment shall be made based on a rationale applying a risk-based approach."
+              ]
+            },
+            {
+              "id": "RQ-06-25",
+              "description": [
+                "The rationale for performing or omitting a cybersecurity assessment shall be reviewed independently."
+              ]
+            },
+            {
+              "id": "RQ-06-26",
+              "description": [
+                "The cybersecurity assessment shall judge the cybersecurity of the item or component based on documented evidence."
+              ]
+            },
+            {
+              "id": "RQ-06-27",
+              "description": [
+                "A person responsible to plan and perform the cybersecurity assessment independently shall be appointed in accordance with RQ-06-01."
+              ]
+            },
+            {
+              "id": "RQ-06-28",
+              "description": [
+                "A person performing a cybersecurity assessment shall have access to relevant information, tools, and cooperation from personnel performing cybersecurity activities."
+              ]
+            },
+            {
+              "id": "PM-06-29",
+              "description": [
+                "A cybersecurity assessment may be based on judgment of whether the objectives of this document are achieved."
+              ]
+            },
+            {
+              "id": "RQ-06-30",
+              "description": [
+                "The scope of a cybersecurity assessment shall include:",
+                "a) the cybersecurity plan and all identified work products;",
+                "b) treatment of cybersecurity risks;",
+                "c) appropriateness and effectiveness of implemented controls and activities; and",
+                "d) rationales demonstrating achievement of the objectives of this document."
+              ]
+            },
+            {
+              "id": "RQ-06-31",
+              "description": [
+                "A cybersecurity assessment report shall include a recommendation for acceptance, conditional acceptance, or rejection of the cybersecurity of the item or component."
+              ]
+            },
+            {
+              "id": "RQ-06-32",
+              "description": [
+                "If conditional acceptance is recommended, the cybersecurity assessment report shall include the conditions for acceptance."
+              ]
+            }
+          ]
+        },
+        {
+          "subsection_id": "6.4.9",
+          "subsection_title": "Release for Post-Development",
+          "requirements": [
+            {
+              "id": "RQ-06-33",
+              "description": [
+                "The following work products shall be available prior to release for post-development:",
+                "a) cybersecurity case [WP-06-02];",
+                "b) if applicable, cybersecurity assessment report [WP-06-03];",
+                "c) cybersecurity requirements for post-development [WP-10-02]."
+              ]
+            },
+            {
+              "id": "RQ-06-34",
+              "description": [
+                "For release for post-development, the following shall be fulfilled:",
+                "a) cybersecurity argument provided by the case is convincing;",
+                "b) cybersecurity case confirmed by assessment, if applicable;",
+                "c) cybersecurity requirements for post-development phases are accepted."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "6.5",
+      "section_title": "Work Products",
+      "work_products": [
+        {
+          "id": "WP-06-01",
+          "description": "Cybersecurity plan, resulting from the requirements of 6.4.1 to 6.4.6."
+        },
+        {
+          "id": "WP-06-02",
+          "description": "Cybersecurity case, resulting from the requirements of 6.4.7."
+        },
+        {
+          "id": "WP-06-03",
+          "description": "Cybersecurity assessment report, if applicable, resulting from the requirements of 6.4.8."
+        },
+        {
+          "id": "WP-06-04",
+          "description": "Release for post-development report, resulting from the requirements of 6.4.9."
+        }
+      ]
+    }
+  ]
+}

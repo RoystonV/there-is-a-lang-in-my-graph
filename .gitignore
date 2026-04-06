@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Environment
+.env
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Project outputs (large generated files)
+outputs/Results/*.json
+outputs/prompts/*.txt
+outputs/sdd_reports/*.md
+outputs/sdd_reports/*.pdf
+outputs/langgraph_evaluation_results/*.json
+
+# Large datasets (tracked separately or downloaded)
+datasets/*.xml
+datasets/*.json
+!datasets/dataecu.json
+!datasets/annex.json
+datasets/reports_db/*.json
+
+# Secrets
+*.key
+*.pem

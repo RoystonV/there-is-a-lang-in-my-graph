@@ -1,0 +1,60 @@
+# -------------------------------
+# Core LLM (Ollama — local)
+# -------------------------------
+ollama-haystack>=2.0.0
+# google-generativeai>=0.7.0    # uncomment to use Gemini instead
+
+# -------------------------------
+# Haystack (RAG framework)
+# -------------------------------
+haystack-ai>=2.0.0
+# google-ai-haystack>=2.0.0     # uncomment to use Gemini instead
+
+# -------------------------------
+# LangGraph (Agentic orchestration)
+# -------------------------------
+langgraph>=0.0.50
+
+# -------------------------------
+# Vector DB (Weaviate)
+# -------------------------------
+weaviate-client>=4.5.4
+weaviate-haystack>=1.0.0
+
+# -------------------------------
+# Embeddings (used by Haystack)
+# -------------------------------
+sentence-transformers>=2.7.0
+torch>=2.1.0
+
+# -------------------------------
+# Prompt rendering
+# -------------------------------
+jinja2>=3.1.0
+
+# -------------------------------
+# PDF export (main.py)
+# -------------------------------
+fpdf2>=2.7.0
+
+# -------------------------------
+# MongoDB (db.py + frontend)
+# -------------------------------
+pymongo>=4.6.0
+
+# -------------------------------
+# Frontend server
+# -------------------------------
+flask>=3.0.0
+flask-cors>=4.0.0
+
+# -------------------------------
+# XML / Parsing (ingest.py)
+# -------------------------------
+lxml>=5.0.0
+
+# -------------------------------
+# Utilities
+# -------------------------------
+tqdm>=4.66.0
+numpy>=1.26.0

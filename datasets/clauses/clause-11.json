@@ -1,0 +1,70 @@
+{
+  "clause_id": "11",
+  "clause_title": "Cybersecurity Validation",
+  "sections": [
+    {
+      "section_id": "11.1",
+      "section_title": "General",
+      "content": [
+        "This clause describes activities for cybersecurity validation at the vehicle level for the item, considering configurations intended for series production."
+      ]
+    },
+    {
+      "section_id": "11.2",
+      "section_title": "Objectives",
+      "content": [
+        "The objectives of this clause are to:",
+        "a) validate the cybersecurity goals and cybersecurity claims;",
+        "b) confirm that the item achieves the cybersecurity goals; and",
+        "c) confirm that no unreasonable risks remain."
+      ]
+    },
+    {
+      "section_id": "11.3",
+      "section_title": "Inputs",
+      "subsections": [
+        {
+          "subsection_id": "11.3.1",
+          "subsection_title": "Prerequisites",
+          "content": [
+            "The following information shall be available:",
+            "— item definition [WP-09-01];",
+            "— cybersecurity goals [WP-09-03];",
+            "— cybersecurity claims [WP-09-04], if applicable."
+          ]
+        },
+        {
+          "subsection_id": "11.3.2",
+          "subsection_title": "Further Supporting Information",
+          "content": [
+            "The following information can be considered:",
+            "— cybersecurity concept [WP-09-06];",
+            "— work products from product development (see 10.5)."
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "11.4",
+      "section_title": "Requirements and Recommendations",
+      "requirements": [
+        {
+          "id": "RQ-11-01",
+          "description": [
+            "Validation activities at the vehicle level for the item, considering configurations for series production, shall confirm:",
+            "a) adequacy of the cybersecurity goals with respect to threat scenarios and corresponding risks;",
+            "b) achievement of the cybersecurity goals of the item;",
+            "c) validity of the cybersecurity claims; and",
+            "d) validity of the requirements on the operational environment, if applicable."
+          ]
+        },
+        {
+          "id": "RQ-11-02",
+          "description": [
+            "A rationale for the selection of validation activities shall be provided."
+          ]
+        }
+      ]
+    }
+  ]
+}

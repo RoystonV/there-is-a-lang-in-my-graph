@@ -1,0 +1,270 @@
+{
+  "clause_id": "8",
+  "clause_title": "Continual Cybersecurity Activities",
+  "sections": [
+    {
+      "section_id": "8.1",
+      "section_title": "General",
+      "content": [
+        "Continual cybersecurity activities are performed throughout all phases of the lifecycle and may occur outside of a specific project.",
+        "Cybersecurity monitoring collects and analyzes cybersecurity information for triage based on defined triggers.",
+        "Cybersecurity event evaluation determines whether a cybersecurity event presents a weakness for an item or component.",
+        "Vulnerability analysis examines weaknesses and assesses whether a weakness can be exploited.",
+        "Vulnerability management tracks and oversees the treatment of identified vulnerabilities in items and components until end of cybersecurity support."
+      ]
+    },
+    {
+      "section_id": "8.2",
+      "section_title": "Objectives",
+      "content": [
+        "The objectives of this clause are to:",
+        "a) monitor cybersecurity information to identify cybersecurity events;",
+        "b) evaluate cybersecurity events to identify weaknesses;",
+        "c) identify vulnerabilities from weaknesses; and",
+        "d) manage identified vulnerabilities."
+      ]
+    },
+    {
+      "section_id": "8.3",
+      "section_title": "Cybersecurity Monitoring",
+      "subsections": [
+        {
+          "subsection_id": "8.3.1",
+          "subsection_title": "Inputs",
+          "subsubsections": [
+            {
+              "subsubsection_id": "8.3.1.1",
+              "subsubsection_title": "Prerequisites",
+              "content": [
+                "Rules and processes included in [WP-05-01] shall be available for the development of triggers."
+              ]
+            },
+            {
+              "subsubsection_id": "8.3.1.2",
+              "subsubsection_title": "Further Supporting Information",
+              "content": [
+                "The following information can be considered:",
+                "— item definition [WP-09-01];",
+                "— cybersecurity claims [WP-09-04];",
+                "— cybersecurity specifications [WP-10-01];",
+                "— threat scenarios [WP-15-03];",
+                "— past vulnerability analyses [WP-08-05];",
+                "— information received from the field (e.g., vulnerability scanning reports, repair data, consumer usage)."
+              ]
+            }
+          ]
+        },
+        {
+          "subsection_id": "8.3.2",
+          "subsection_title": "Requirements and Recommendations",
+          "requirements": [
+            {
+              "id": "RQ-08-01",
+              "description": [
+                "Sources shall be selected for the collection of cybersecurity information.",
+                "Sources may include internal and/or external entities such as researchers, suppliers, customers, or government sources."
+              ]
+            },
+            {
+              "id": "RQ-08-02",
+              "description": [
+                "Triggers shall be defined and maintained for triage of cybersecurity information."
+              ]
+            },
+            {
+              "id": "RQ-08-03",
+              "description": [
+                "Cybersecurity information shall be collected and triaged to determine if it becomes one or more cybersecurity events."
+              ]
+            }
+          ]
+        },
+        {
+          "subsection_id": "8.3.3",
+          "subsection_title": "Work Products",
+          "work_products": [
+            {
+              "id": "WP-08-01",
+              "description": "Sources for cybersecurity information, resulting from RQ-08-01."
+            },
+            {
+              "id": "WP-08-02",
+              "description": "Triggers, resulting from RQ-08-02."
+            },
+            {
+              "id": "WP-08-03",
+              "description": "Cybersecurity events, resulting from RQ-08-03."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "8.4",
+      "section_title": "Cybersecurity Event Evaluation",
+      "subsections": [
+        {
+          "subsection_id": "8.4.1",
+          "subsection_title": "Inputs",
+          "subsubsections": [
+            {
+              "subsubsection_id": "8.4.1.1",
+              "subsubsection_title": "Prerequisites",
+              "content": [
+                "Cybersecurity events [WP-08-03];",
+                "Cybersecurity requirements for post-development [WP-10-02], if applicable;",
+                "Configuration information in accordance with RQ-05-12."
+              ]
+            },
+            {
+              "subsubsection_id": "8.4.1.2",
+              "subsubsection_title": "Further Supporting Information",
+              "content": [
+                "Item definition [WP-09-01];",
+                "Cybersecurity specifications [WP-10-01];",
+                "Past vulnerability analyses [WP-08-05]."
+              ]
+            }
+          ]
+        },
+        {
+          "subsection_id": "8.4.2",
+          "subsection_title": "Requirements and Recommendations",
+          "requirements": [
+            {
+              "id": "RQ-08-04",
+              "description": [
+                "A cybersecurity event shall be evaluated to identify weaknesses in an item and/or component."
+              ]
+            }
+          ]
+        },
+        {
+          "subsection_id": "8.4.3",
+          "subsection_title": "Work Products",
+          "work_products": [
+            {
+              "id": "WP-08-04",
+              "description": "Weaknesses from cybersecurity events, resulting from RQ-08-04."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "8.5",
+      "section_title": "Vulnerability Analysis",
+      "subsections": [
+        {
+          "subsection_id": "8.5.1",
+          "subsection_title": "Inputs",
+          "subsubsections": [
+            {
+              "subsubsection_id": "8.5.1.1",
+              "subsubsection_title": "Prerequisites",
+              "content": [
+                "Item definition [WP-09-01] or cybersecurity specifications [WP-10-01] shall be available."
+              ]
+            },
+            {
+              "subsubsection_id": "8.5.1.2",
+              "subsubsection_title": "Further Supporting Information",
+              "content": [
+                "Weaknesses from cybersecurity events [WP-08-04];",
+                "Weaknesses found during product development [WP-10-05];",
+                "Past vulnerability analyses [WP-08-05];",
+                "Attack paths [WP-15-05];",
+                "Verification reports [WP-10-04] and [WP-10-07];",
+                "Information from past cybersecurity incidents."
+              ]
+            }
+          ]
+        },
+        {
+          "subsection_id": "8.5.2",
+          "subsection_title": "Requirements and Recommendations",
+          "requirements": [
+            {
+              "id": "RQ-08-05",
+              "description": [
+                "Weaknesses shall be analyzed to identify vulnerabilities.",
+                "The analysis may include architecture review, attack path analysis per 15.6, and attack feasibility rating per 15.7.",
+                "Root cause analysis may also be performed to determine underlying contributing factors."
+              ]
+            },
+            {
+              "id": "RQ-08-06",
+              "description": [
+                "A rationale shall be provided for any weakness not identified as a vulnerability."
+              ]
+            }
+          ]
+        },
+        {
+          "subsection_id": "8.5.3",
+          "subsection_title": "Work Products",
+          "work_products": [
+            {
+              "id": "WP-08-05",
+              "description": "Vulnerability analysis, resulting from RQ-08-05 and RQ-08-06."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "8.6",
+      "section_title": "Vulnerability Management",
+      "subsections": [
+        {
+          "subsection_id": "8.6.1",
+          "subsection_title": "Inputs",
+          "subsubsections": [
+            {
+              "subsubsection_id": "8.6.1.1",
+              "subsubsection_title": "Prerequisites",
+              "content": [
+                "Vulnerability analysis [WP-08-05] shall be available."
+              ]
+            },
+            {
+              "subsubsection_id": "8.6.1.2",
+              "subsubsection_title": "Further Supporting Information",
+              "content": ["None."]
+            }
+          ]
+        },
+        {
+          "subsection_id": "8.6.2",
+          "subsection_title": "Requirements and Recommendations",
+          "requirements": [
+            {
+              "id": "RQ-08-07",
+              "description": [
+                "Vulnerabilities shall be managed such that for each vulnerability:",
+                "a) corresponding cybersecurity risks are assessed and treated per Clause 15 so that no unreasonable risks remain; or",
+                "b) the vulnerability is eliminated through available remediation independent of TARA."
+              ]
+            },
+            {
+              "id": "RQ-08-08",
+              "description": [
+                "If a risk treatment decision necessitates cybersecurity incident response, Clause 13.3 shall be applied."
+              ]
+            }
+          ]
+        },
+        {
+          "subsection_id": "8.6.3",
+          "subsection_title": "Work Products",
+          "work_products": [
+            {
+              "id": "WP-08-06",
+              "description": "Evidence of managed vulnerabilities, resulting from RQ-08-07."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

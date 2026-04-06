@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TARA Visualizer · ISO/SAE 21434</title>
+  <meta name="description" content="Interactive TARA Report Visualizer — Browse ISO/SAE 21434 Threat Analysis & Risk Assessment reports from MongoDB with node-graph architecture views and damage scenario tables." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="app">
+
+  <!-- ═══════════════════════════════════════════
+       HEADER
+       ═══════════════════════════════════════════ -->
+  <header id="header">
+    <div class="header-logo">
+      <div class="logo-icon">🛡️</div>
+      <h1>TARA Visualizer <span>ISO/SAE 21434</span></h1>
+    </div>
+
+    <div class="header-spacer"></div>
+
+    <div class="header-stat">
+      Reports in DB: <strong id="header-report-count">—</strong>
+    </div>
+
+    <div class="status-pill" id="status-pill">
+      <div class="dot"></div>
+      <span id="status-text">Connecting…</span>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════
+       LEFT SIDEBAR — Report list
+       ═══════════════════════════════════════════ -->
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-title">Reports · MongoDB</div>
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input id="search-input" type="text" placeholder="Filter by ECU name…" autocomplete="off" />
+      </div>
+    </div>
+
+    <div class="report-list" id="report-list">
+      <div class="sidebar-empty">
+        <div class="empty-icon">⏳</div>
+        <div>Loading reports…</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ═══════════════════════════════════════════
+       MAIN — Graph canvas
+       ═══════════════════════════════════════════ -->
+  <main id="main">
+
+    <!-- Loading overlay -->
+    <div id="loading-overlay">
+      <div class="spinner"></div>
+      <div class="loading-text">Fetching report from MongoDB…</div>
+    </div>
+
+    <!-- Placeholder -->
+    <div id="graph-placeholder">
+      <div class="placeholder-icon">🔷</div>
+      <div class="placeholder-text">Select a TARA report from the sidebar</div>
+      <div class="placeholder-sub">The ECU architecture graph will appear here</div>
+    </div>
+
+    <!-- SVG graph target -->
+    <div id="graph-canvas"></div>
+
+    <!-- Graph toolbar -->
+    <div id="graph-toolbar">
+      <button class="toolbar-btn" id="btn-zoom-in"  title="Zoom in">＋</button>
+      <button class="toolbar-btn" id="btn-zoom-out" title="Zoom out">－</button>
+      <button class="toolbar-btn" id="btn-fit"      title="Fit to view">⊞ Fit</button>
+      <button class="toolbar-btn" id="btn-tidy"     title="Auto Layout (Structured)">🪄 Tidy</button>
+      <div style="width:1px;background:var(--border);margin:0 2px;"></div>
+      <button class="toolbar-btn" id="btn-fullscreen" title="Wide View">⛶ Focus</button>
+      <div style="width:1px;background:var(--border);margin:0 2px;"></div>
+      <button class="toolbar-btn" id="btn-show-prompt" title="View RAG Prompt">📄 Prompt</button>
+      <span style="font-size:10px;color:var(--text-muted);padding:6px 8px;">Scroll to zoom · Drag to pan</span>
+    </div>
+
+    <!-- Legend -->
+    <div style="position:absolute;top:12px;right:12px;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-md);padding:10px 14px;font-size:10.5px;color:var(--text-muted);z-index:10;line-height:1.8;">
+      <div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.7px;margin-bottom:6px;color:var(--text-label);">Legend</div>
+      <div style="display:flex;align-items:center;gap:6px;"><span style="display:inline-block;width:14px;height:14px;border-radius:3px;border:1px solid rgba(59,130,246,0.4);background:rgba(59,130,246,0.06);"></span> Group / Container</div>
+      <div style="display:flex;align-items:center;gap:6px;margin-top:3px;"><span style="display:inline-block;width:14px;height:10px;border-radius:2px;background:#dadada;border:1px solid #666;"></span> Component Node</div>
+      <div style="display:flex;align-items:center;gap:6px;margin-top:3px;"><span style="display:inline-block;width:14px;height:14px;background:#e3e896;border:1px solid #666;transform:rotate(45deg);border-radius:2px;"></span> Data Node</div>
+      <div style="display:flex;align-items:center;gap:6px;margin-top:3px;"><span style="display:inline-block;width:24px;height:2px;background:#808080;border-top:2px dashed #808080;"></span> Edge / Link</div>
+    </div>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       RIGHT PANEL — Damage scenarios
+       ═══════════════════════════════════════════ -->
+  <aside id="right-panel">
+
+    <!-- Stats row -->
+    <div class="stats-row">
+      <div class="stat-cell">
+        <div class="stat-num"        id="stat-nodes">—</div>
+        <div class="stat-label">Nodes</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num green"  id="stat-edges">—</div>
+        <div class="stat-label">Edges</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num amber"  id="stat-derivs">—</div>
+        <div class="stat-label">Threats</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num purple" id="stat-details">—</div>
+        <div class="stat-label">Details</div>
+      </div>
+    </div>
+
+    <!-- Selected node info -->
+    <div id="node-info">
+      <div class="node-info-empty">Click a node to inspect it</div>
+    </div>
+
+    <!-- Damage scenarios header -->
+    <div class="panel-header">
+      <div class="panel-title">Damage Scenarios</div>
+      <div class="panel-count" id="panel-count">0</div>
+    </div>
+
+    <!-- Damage list -->
+    <div id="damage-list">
+      <div class="panel-empty">
+        <div class="empty-icon">📋</div>
+        <div>Select a report to view threats</div>
+      </div>
+    </div>
+
+  </aside>
+
+</div><!-- #app -->
+
+<!-- Tooltip (global) -->
+<!-- Prompt Modal -->
+<div id="prompt-modal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3>RAG Prompt & Evaluation</h3>
+      <button class="close-btn" onclick="closePromptModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="eval-metrics" id="modal-eval-metrics">
+        <!-- Metrics here -->
+      </div>
+      <div class="prompt-section">
+        <label>Full Prompt sent to LLM:</label>
+        <pre id="modal-prompt-text"></pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- External Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/dagre@0.8.5/dist/dagre.min.js"></script>
+
+<script src="graph.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
